@@ -3,12 +3,28 @@ html {
   font-size: 15px;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
 body {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
 }
 
 main {
@@ -19,13 +35,25 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   gap: 48px;
   padding: 64px 24px;
-  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top, bottom;
 }
-main div.hero {
+main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+}
+main > div section.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,19 +63,19 @@ main div.hero {
           flex-direction: column;
   gap: 24px;
 }
-main div.hero h1 {
+main > div section.hero h1 {
   font-size: 37px;
   color: hsl(300deg, 43%, 22%);
   text-align: center;
 }
-main div.hero > p {
+main > div section.hero > p {
   color: hsl(303deg, 10%, 53%);
   font-size: 18px;
   text-align: center;
   font-weight: 500;
   line-height: 24px;
 }
-main .rates {
+main > div .rates {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +91,7 @@ main .rates {
   gap: 16px;
   width: 100%;
 }
-main .rates article {
+main > div .rates > article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +107,7 @@ main .rates article {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .rates article .stars {
+main > div .rates > article div.stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +116,7 @@ main .rates article .stars {
           justify-content: center;
   gap: 8px;
 }
-main .rates article p {
+main > div .rates > article p {
   text-align: center;
   font-size: 18px;
   color: hsl(300deg, 43%, 22%);
@@ -155,4 +183,89 @@ main .reviews article > p {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+  }
+  main {
+    max-width: 1136px;
+    gap: 64px;
+  }
+  main > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+  }
+  main > div section.hero {
+    -ms-flex-negative: 1.2;
+        flex-shrink: 1.2;
+  }
+  main > div section.hero h1 {
+    font-size: 46px;
+    text-align: left;
+    padding-right: 64px;
+  }
+  main > div section.hero p {
+    text-align: left;
+  }
+  main > div section.rates article {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 32px;
+    width: 80%;
+    padding: 16px 32px;
+  }
+  main > div section.rates article:nth-child(1) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  main > div section.rates article:nth-child(2) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  main > div section.rates article:nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  main > div section.rates article div.stars img {
+    width: 17px;
+    height: 16px;
+  }
+  main > section.reviews {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    min-height: 272px;
+    gap: 32px;
+  }
+  main > section.reviews article {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main > section.reviews article:nth-child(2) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  main > section.reviews article:nth-child(3) {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }/*# sourceMappingURL=styles.css.map */
