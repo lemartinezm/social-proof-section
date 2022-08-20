@@ -1,0 +1,158 @@
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 48px;
+  padding: 64px 24px;
+  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+}
+main div.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+}
+main div.hero h1 {
+  font-size: 37px;
+  color: hsl(300deg, 43%, 22%);
+  text-align: center;
+}
+main div.hero > p {
+  color: hsl(303deg, 10%, 53%);
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 24px;
+}
+main .rates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  gap: 16px;
+  width: 100%;
+}
+main .rates article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background-color: hsl(300deg, 24%, 96%);
+  width: 100%;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+main .rates article .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+main .rates article p {
+  text-align: center;
+  font-size: 18px;
+  color: hsl(300deg, 43%, 22%);
+  font-weight: 700;
+}
+main .reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+main .reviews article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  background-color: hsl(300deg, 43%, 22%);
+  padding: 36px;
+  border-radius: 8px;
+}
+main .reviews article > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+}
+main .reviews article > div img {
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+}
+main .reviews article > div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+main .reviews article > div div > h3 {
+  font-size: 18px;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 500;
+}
+main .reviews article > div div > p {
+  font-size: 18px;
+  color: hsl(333deg, 80%, 67%);
+}
+main .reviews article > p {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}/*# sourceMappingURL=styles.css.map */
